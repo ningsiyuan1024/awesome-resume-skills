@@ -1,0 +1,110 @@
+{
+  "checked_on": "2026-11-14",
+  "scope": "Public repository metadata and selected upstream documentation only. No installation, upstream code execution, rendering or recruiting-outcome validation.",
+  "entries": [
+    {
+      "repo": "rendercv/rendercv-skill",
+      "path": "skills/rendercv/SKILL.md",
+      "readable": true,
+      "blob_sha": "2e2817ec4b659fdcc5c42774455b5e234534adab",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "cosen1024/resume-builder-skill",
+      "path": "resume_skill/SKILL.md",
+      "readable": true,
+      "blob_sha": "049abae40b1e8c26257e13ef64eeaba81c4d665d",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "LittleDrunkWang/resume-builder-cn",
+      "path": "SKILL.md",
+      "readable": true,
+      "blob_sha": "42c30aac89dd1ba765696222c4f62862d4c02b15",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "Denis-Tang/resume-layout-skill",
+      "path": "SKILL.md",
+      "readable": true,
+      "blob_sha": "29a0d7d49c7b4b4f4db38e18bd2dd4540312fc9c",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "Eric-Zhou-0302/JSON-Resume",
+      "path": "SKILL.md",
+      "readable": true,
+      "blob_sha": "cf7167919a71f27f4dec40c451e1fce9e104f8a1",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "beholder91/resume-md-skill",
+      "path": "plugins/resume-md/skills/resume-md/SKILL.md",
+      "readable": true,
+      "blob_sha": "0271b71a765d54c659afac8f4b4d6c92240e2ffe",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "Chasen-Liao/resume-skills",
+      "path": "skills/resume-builder/SKILL.md",
+      "readable": true,
+      "blob_sha": "6fcba9775de086c020965673ecb8fdbb0f58d0ce",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "INIT1996/resume-builder",
+      "path": "SKILL.md",
+      "readable": true,
+      "blob_sha": "d4ac50b5c6e7befbc1d1d6b07edc13d422aeb4b6",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "leemysw/skills",
+      "path": "resume-coach/SKILL.md",
+      "readable": true,
+      "blob_sha": "9d127984677da5dc74be5c870da9fbf7df321385",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "wyh0626/resume-optimizer",
+      "path": "SKILL.md",
+      "readable": true,
+      "blob_sha": "d480f1ed58337223977255f3a089108540a7b2a3",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "Ssabby1/repo-to-resume-tailor",
+      "path": "repo-to-resume-tailor/SKILL.md",
+      "readable": true,
+      "blob_sha": "d7ec1bfa17aec3dbc434ac8d4c0bfef1fca86f51",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "HduSy/resume-md2pdf",
+      "path": "SKILL.md",
+      "readable": true,
+      "blob_sha": "c3ce63ff95928340318e2d2c1d84fe3f325b44ad",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    },
+    {
+      "repo": "hyf020908/resume-factory",
+      "path": "SKILL.md",
+      "readable": true,
+      "blob_sha": "b24ae6e33cabdecf17ef8958ed6aadd96acf0b85",
+      "checked_on": "2026-11-14",
+      "read_scope": "Entry header rechecked; descriptions also based on earlier selected upstream sections and README."
+    }
+  ]
+}
