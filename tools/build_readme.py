@@ -88,5 +88,5 @@ tail='''
 本仓库原创目录、说明与维护脚本使用 [MIT License](LICENSE)。链接项目、字体和模板各自保留原授权；收录不授予其代码或素材的再分发权。
 '''
 text=head+table(layout)+'\n\n## 内容、成果与岗位适配\n\n'+table(content)+'\n\n## 待评估与适用限制\n\n下面项目有明确能力线索，但存在适配或使用规则问题；列出用于比较，不作为开箱即用推荐。\n\n'+table(watch)+'\n'+tail
-(ROOT/'README.md').write_text(text,encoding='utf-8')
+(ROOT/'README.md').write_text(text,encoding='utf-8',newline='\n')
 print(f'Generated README: {len(layout)} layout, {len(content)} content, {len(watch)} watch.')
