@@ -1,0 +1,91 @@
+cv:
+  name: 林知远
+  headline: Agent / Harness 研发工程师
+  location: 示例市
+  email: lin.zhiyuan@example.com
+  sections:
+    工作经历:
+    - name: 虚构星河科技 · Agent 研发工程师
+      date: 2025.06 - 2025.09
+      highlights:
+      - 在固定的 20 个虚构办公任务中，端到端完成率由 20% 提升至 85%；仅代表该测试集，不代表全部用户。
+      - 建设日志、指标与链路追踪，复现 iframe 交互失败，交付知识库检索与回写功能。
+      - 团队同规模需求工程投入由 5 人日降至 3 人日；个人负责工具接入，不能归为个人独立完成全部系统。
+    项目经历:
+    - name: 中文办公 Agent
+      date: 2025.01 - 2025.03
+      highlights:
+      - 面向虚构财务场景，交付网页查询、文件导出与业务结果回读；支持 MCP、Browser Use 和 Computer Use。
+      - 新增操作录制，部分流程无需开发者重复编写；节省时间尚未测量。
+    - name: GUI 元素定位
+      date: 2025.03 - 2025.04
+      highlights:
+      - 基于 Qwen2.5-VL-3B-Instruct 进行 LoRA 微调，样例定位准确率 84.9%；样本量 100，结果仅为虚构测试数据。
+      - 处理中英文混排、坐标缩放与还原：中文标点（括号）、连字符和 93%+ 不能丢失。
+    - name: 多仓 Coding Harness
+      date: 2025.04 - 2025.05
+      highlights:
+      - 覆盖 4 个虚构业务仓，以 merge-base 修复已提交代码漏检；尚未测量线上缺陷率。
+    教育经历:
+    - name: 虚构城市大学 · 计算物理学 · 本科
+      date: 2020.09 - 2024.06
+      highlights:
+      - 以上学校、公司、人物和指标均为虚构，仅用于排版与事实边界测试。
+    压力样例:
+    - bullet: 中文压力样例第 0 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 1 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 2 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 3 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 4 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 5 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 6 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 7 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 8 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 9 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 10 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 11 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 12 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 13 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 14 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 15 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 16 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 17 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 18 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 19 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 20 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 21 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 22 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 23 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 24 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 25 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 26 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 27 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 28 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 29 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 30 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 31 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 32 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 33 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 34 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 35 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 36 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 37 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 38 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+    - bullet: 中文压力样例第 39 条：知识库检索与回写、Qwen2.5-VL-3B-Instruct、84.9% 和团队归属应完整保留。
+design:
+  theme: engineeringresumes
+  typography:
+    font_family:
+      body: Microsoft YaHei
+      name: Microsoft YaHei
+      headline: Microsoft YaHei
+      connections: Microsoft YaHei
+      section_titles: Microsoft YaHei
+  page:
+    size: a4
+  entries:
+    allow_page_break: true
+  sections:
+    allow_page_break: true
+locale:
+  language: mandarin_chinese

@@ -1,0 +1,77 @@
+{
+  "paper_size": "A4",
+  "basics": {
+    "name": "林知远",
+    "contacts": [
+      {
+        "label": "lin.zhiyuan@example.com",
+        "href": "mailto:lin.zhiyuan@example.com"
+      },
+      {
+        "label": "示例市",
+        "href": null
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "工作经历",
+      "entries": [
+        {
+          "title": "虚构星河科技 · Agent 研发工程师",
+          "start_date": "2025-06",
+          "end_date": "2025-09",
+          "bullets": [
+            "在固定的 20 个虚构办公任务中，端到端完成率由 20% 提升至 85%；仅代表该测试集，不代表全部用户。",
+            "建设日志、指标与链路追踪，复现 iframe 交互失败，交付知识库检索与回写功能。",
+            "团队同规模需求工程投入由 5 人日降至 3 人日；个人负责工具接入，不能归为个人独立完成全部系统。"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "项目经历",
+      "entries": [
+        {
+          "title": "中文办公 Agent",
+          "start_date": "2025-01",
+          "end_date": "2025-03",
+          "bullets": [
+            "面向虚构财务场景，交付网页查询、文件导出与业务结果回读；支持 MCP、Browser Use 和 Computer Use。",
+            "新增操作录制，部分流程无需开发者重复编写；节省时间尚未测量。"
+          ]
+        },
+        {
+          "title": "GUI 元素定位",
+          "start_date": "2025-03",
+          "end_date": "2025-04",
+          "bullets": [
+            "基于 Qwen2.5-VL-3B-Instruct 进行 LoRA 微调，样例定位准确率 84.9%；样本量 100，结果仅为虚构测试数据。",
+            "处理中英文混排、坐标缩放与还原：中文标点（括号）、连字符和 93%+ 不能丢失。"
+          ]
+        },
+        {
+          "title": "多仓 Coding Harness",
+          "start_date": "2025-04",
+          "end_date": "2025-05",
+          "bullets": [
+            "覆盖 4 个虚构业务仓，以 merge-base 修复已提交代码漏检；尚未测量线上缺陷率。"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "教育经历",
+      "entries": [
+        {
+          "title": "虚构城市大学 · 计算物理学 · 本科",
+          "start_date": "2020-09",
+          "end_date": "2024-06",
+          "bullets": [
+            "以上学校、公司、人物和指标均为虚构，仅用于排版与事实边界测试。"
+          ]
+        }
+      ]
+    }
+  ]
+}

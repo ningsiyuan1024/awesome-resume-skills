@@ -14,4 +14,9 @@ for e in data['entries']:
     for url in e['sources']+e['community']:assert url.startswith('https://'),url
     assert f"https://github.com/{e['repo']}" in (root/'README.md').read_text(encoding='utf-8')
 for rel in ('README.md','CONTRIBUTING.md','LICENSE','docs/community-sources.md'):assert(root/rel).is_file(),rel
-print(f'Catalog checks passed: {len(ids)} entries. Upstream code was not executed.')
+for e in data['entries']:
+    test=e.get('test_result')
+    if test:
+        assert re.fullmatch(r'[0-9a-f]{40}',test['source_commit']),e['id']
+        assert (root/test['report']).is_file(),e['id']
+print(f'Catalog checks passed: {len(ids)} entries. This validator checks catalog structure, not upstream execution.')

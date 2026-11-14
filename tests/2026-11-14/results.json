@@ -1,0 +1,613 @@
+{
+  "date": "2026-11-14",
+  "scope": "single fictional Chinese resume; deterministic rendering checks and same-session guided content exercises; not full autonomous agent evaluation",
+  "environment": {
+    "platforms": [
+      "Windows",
+      "WSL Ubuntu"
+    ],
+    "windows_python": "3.12.14",
+    "rendercv": "2.8",
+    "python_docx": "1.2.0",
+    "json_resume": "1.1.4",
+    "windows_weasyprint": "70.0 (native dependency failure)",
+    "wsl_weasyprint": "constrained <67",
+    "python_playwright": "1.65.2",
+    "chasen_playwright": "1.62.1",
+    "hdu_puppeteer": "23.11.1",
+    "browsers": "installed Microsoft Edge; upstream Playwright/Puppeteer routed to Edge",
+    "word": "local Microsoft Word COM export",
+    "font": "Microsoft YaHei on Windows; private Noto Sans SC + fontconfig on WSL"
+  },
+  "projects": [
+    {
+      "id": "rendercv",
+      "source_commit": "fc14e727b2d4a36c612ef0989726bd18411218d7",
+      "status": "baseline_pass_with_configuration",
+      "summary": "推荐 PDF 排版；六主题中文一页通过。需配置中文字体；40 条长文默认设置裁字，开启章节和条目跨页后两页通过。"
+    },
+    {
+      "id": "cosen-resume-builder",
+      "source_commit": "a4bfa74bd72ef1a75fd9c02ac1e27dd353f6dde1",
+      "status": "conditional",
+      "summary": "五模板 HTML + Edge 输出通过；Windows 原生 WeasyPrint 缺 DLL。WSL 补齐中文字体与 fontconfig 后 compact 通过；缺字体首次输出中文丢失。"
+    },
+    {
+      "id": "json-resume-docx",
+      "source_commit": "9ca9ada33c927dadaf8e483c2269165847830e85",
+      "status": "baseline_pass_with_configuration",
+      "summary": "推荐 Word；按其 JSON 契约适配后，原 CLI 生成 DOCX 并通过 Word 导出一页 PDF。标签联系人需显式 href:null。"
+    },
+    {
+      "id": "resume-docx",
+      "source_commit": "3cdde8a109b8bc83fae66ed69d4b910385e2fe12",
+      "status": "partial",
+      "summary": "适配专用 Markdown 语法后文字保留；普通语法会漏联系信息和教育。原脚本把个人所在地补进学校所在地，严格保真不通过。"
+    },
+    {
+      "id": "resumemd",
+      "source_commit": "ea92c361ea61d86e2a028da2cf95ada4c55e33b3",
+      "status": "baseline_pass_on_supported_platform",
+      "summary": "WSL Ubuntu 原 CLI 输出中文一页，Noto Sans SC 字体下载成功；原生 Windows 不在上游支持范围。"
+    },
+    {
+      "id": "chasen-resume-skills",
+      "source_commit": "3e5b8f61c81349ed9b4b5113c4faf8b4ac8f6992",
+      "status": "conditional_visual_issue",
+      "summary": "Edge 适配后原渲染器通过；Canvas 编辑、保存、读回及重导出已操作验证。短稿出现大段纵向留白，需调布局。默认 Chromium 下载在本次环境超时。"
+    },
+    {
+      "id": "resume-optimizer",
+      "source_commit": "fb16670c07bf22cce8c8a9b8494bbd693ea4651c",
+      "status": "single_session_only",
+      "summary": "按上游流程做一次中文样例审计，保留团队归属与未测量项；非独立或重复模型评测，无排版器验收。"
+    },
+    {
+      "id": "resume-coach",
+      "source_commit": "c74119813aa295331e21d07e04cc86a377a16956",
+      "status": "partial_parser_and_single_session",
+      "summary": "中文诊断单次演练完成；MD/PDF 解析保留检查项。DOCX 解析只读普通段落，漏掉表格中的公司、学校和项目标题，不可直接信任诊断。"
+    },
+    {
+      "id": "repo-to-resume-tailor",
+      "source_commit": "6d2f526b15a6e8f6796e5953d48d7130a06def61",
+      "status": "single_session_only",
+      "summary": "用虚构仓库做一次中文证据演练，区分本人函数与参考模板；不证明真实履历收益或重复执行质量。"
+    },
+    {
+      "id": "resume-builder-cn",
+      "source_commit": "82f90483ca06984060848f4521ff7aabc872726a",
+      "status": "template_only",
+      "summary": "入口 YAML 有效。上游可编辑模板填入同一虚构样例后用 Edge 导出通过；没有执行完整访谈、岗位研究及其原导出脚本。"
+    },
+    {
+      "id": "init-resume-builder",
+      "source_commit": "c710c4d7d00b8b245cf7913c9a989a3c1bebae0d",
+      "status": "baseline_only_stress_fail",
+      "summary": "入口 YAML 有效。样例模板单页通过；多块长文示例分页生成 5 页，7 个压力编号的完整正文不可提取，页面边缘可见裁切。"
+    },
+    {
+      "id": "resume-md2pdf",
+      "source_commit": "44c511605b7efbaf9a51715fd15bb7c6c4993a03",
+      "status": "conditional",
+      "summary": "上游建 HTML 和导出脚本使用 Edge，中文技术词混排样例及 40 条长文通过。上游仍明确不支持混排，不将一次成功扩展为通用支持。"
+    },
+    {
+      "id": "resume-factory",
+      "source_commit": "2fd9453f6fa90c39e70e30f6c8cb3e22c710f293",
+      "status": "blocked_environment",
+      "summary": "真实上游模板的 XeLaTeX 编译探针缺 TikZ shadows.blur，未生成 PDF；不是完整中文样例通过。未为测试安装全局 TeX 包。"
+    }
+  ],
+  "pdf_checks": [
+    {
+      "path": "outputs/chasen-canvas.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 9.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "407274b27ac4af1c303f9b4fe8ef79e2555be4fbe7e38b8a6ac8e4b12185d6a3"
+    },
+    {
+      "path": "outputs/chasen.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 9.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "245a0ec3c427a627f56ba3666fae00947502756a926617fe5e9f83bf4e6e81ed"
+    },
+    {
+      "path": "outputs/cosen-classic.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.5,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "eb83e6a9dbf8eae5e69e9b514443b8d887696c7df35d68c882a9c6b170c3f004"
+    },
+    {
+      "path": "outputs/cosen-compact.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "05ca6ece1368a7524d9ce2f84eac06fe71adc7de461e74a7e48a7f5c8e30e968"
+    },
+    {
+      "path": "outputs/cosen-minimal.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 9.8,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "f2817e70a591f236bf0c35368312460a77862b604897040f931151d78b21ce02"
+    },
+    {
+      "path": "outputs/cosen-modern.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.5,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "aa5b77fe1c4142b95ea7b47d387c186c2566370bcbdb1cf386ad75447a84b188"
+    },
+    {
+      "path": "outputs/cosen-stress.pdf",
+      "pages": 2,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "edae15fdcac3d5ea8c8a45c03acfbb348fc75ddd6230d1c653ebfeaaceabc6e4"
+    },
+    {
+      "path": "outputs/cosen-timeline.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 9.8,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "f1662d6ceeae3751317742c7b34a17af40c7ce7c3cc30babbad42ee362787be2"
+    },
+    {
+      "path": "outputs/cosen-weasy-linux-fixed.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "c76fd9fd0d9556d0b402665b528760d561b903a8d3cf910da9a7149c955ac71e"
+    },
+    {
+      "path": "outputs/cosen-weasy-linux.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [
+        "林知远",
+        "虚构星河科技",
+        "计算物理学",
+        "知识库检索与回写",
+        "尚未测量"
+      ],
+      "missing_bullets": [
+        "在固定的 20 个虚构办公任务中，端到端完成率由 20% 提升至 85%；仅代表该测试集，不代表全部用户。",
+        "建设日志、指标与链路追踪，复现 iframe 交互失败，交付知识库检索与回写功能。",
+        "团队同规模需求工程投入由 5 人日降至 3 人日；个人负责工具接入，不能归为个人独立完成全部系统。",
+        "面向虚构财务场景，交付网页查询、文件导出与业务结果回读；支持 MCP、Browser Use 和 Computer Use。",
+        "新增操作录制，部分流程无需开发者重复编写；节省时间尚未测量。",
+        "基于 Qwen2.5-VL-3B-Instruct 进行 LoRA 微调，样例定位准确率 84.9%；样本量 100，结果仅为虚构测试数据。",
+        "处理中英文混排、坐标缩放与还原：中文标点（括号）、连字符和 93%+ 不能丢失。",
+        "覆盖 4 个虚构业务仓，以 merge-base 修复已提交代码漏检；尚未测量线上缺陷率。",
+        "以上学校、公司、人物和指标均为虚构，仅用于排版与事实边界测试。"
+      ],
+      "min_body_font_pt": null,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "8c5895855719d850356c9725e56c20df13ffb3905c03ae439bae818bddea8380"
+    },
+    {
+      "path": "outputs/init-resume-builder.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.5,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "50750808f66f4a8e69dd12862cc24b59ae228703634ec29d134984acee4ae6f6"
+    },
+    {
+      "path": "outputs/init-stress.pdf",
+      "pages": 5,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.5,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "f5968061e6d9a47b5ecb5ac4a8b1303369020ff047565dbf27dc14dad656d9b2"
+    },
+    {
+      "path": "outputs/json-resume.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 11.04,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "132f77936a76bd099615358f4c78eb9b552237d292bc89ebe754717fe910c095"
+    },
+    {
+      "path": "outputs/md2pdf-stress.pdf",
+      "pages": 2,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.5,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "e647c0fa9f24cab20e46e95ec249ea5b5b2f0a447cc9fdcb4524529eade93513"
+    },
+    {
+      "path": "outputs/md2pdf.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.5,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "72ed12240734b1e8f60ca6420880ff9d98c1ca62896ab60e0199e219633f6b00"
+    },
+    {
+      "path": "outputs/rendercv/林知远_CV.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "72d25e03192bf4cb65d7464054a48ec46c54643c09cfaa8c8a4d4bb9cb2a7e12"
+    },
+    {
+      "path": "outputs/rendercv-classic/林知远_CV.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "31c929e4f96d7f6d5ba711fa470392fbf50dfcef7f8c64c30c57a75b6fb684d9"
+    },
+    {
+      "path": "outputs/rendercv-dense/林知远_CV.pdf",
+      "pages": 3,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [
+        "•",
+        " ",
+        "中文压力样例第39 条：知识库检索与回写",
+        "Qwen2 5-VL-3B-Instruct",
+        "84 9% 和团队归属应完整保留"
+      ],
+      "sha256": "a47ba91da87f2f34735337ca208da385d6271e2c289e7a4df3f3650edfc12d13"
+    },
+    {
+      "path": "outputs/rendercv-dense-breakable/林知远_CV.pdf",
+      "pages": 2,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "5d51e11f7e26932969ff10a6ec86e527251f301ffdb2f7f73769deddbc43152b"
+    },
+    {
+      "path": "outputs/rendercv-engineeringclassic/林知远_CV.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "56c06a547c837d2f4c18e6d8297c68fb45ff827e566a21b363667a1bef0b1e2c"
+    },
+    {
+      "path": "outputs/rendercv-harvard/林知远_CV.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "eb861b65a082c769ffad730ee6697ab1179871cefa4ff46f6a0c1aad4c166fd5"
+    },
+    {
+      "path": "outputs/rendercv-moderncv/林知远_CV.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "fb2f1b99cf1876f4d886758d50f514eae82e79ed96dbaad5462ba51f2e5daf3b"
+    },
+    {
+      "path": "outputs/rendercv-sb2nov/林知远_CV.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "9cdbf9b5e2233d98bdecb1f317bbab59041a0666545812cdb89db587b67fbd71"
+    },
+    {
+      "path": "outputs/resume-builder-cn.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "5ecfc8b06647d898a431d5fa4ef8947a53703ac812dc0e32f457bcf2dc366c92"
+    },
+    {
+      "path": "outputs/resume-docx-adapted.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 9.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "4ff952b0a66e651b00207001f624038965e1f75f635795c7673bcb497932abf4"
+    },
+    {
+      "path": "outputs/resume-docx.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [
+        "计算物理学"
+      ],
+      "missing_bullets": [
+        "以上学校、公司、人物和指标均为虚构，仅用于排版与事实边界测试。"
+      ],
+      "min_body_font_pt": 9.0,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "eccbb88ef9f069f1e510c6872560114f3d8ac5cfd30a562d9916589ac55803ff"
+    },
+    {
+      "path": "outputs/resumemd.pdf",
+      "pages": 1,
+      "a4": true,
+      "missing_markers": [],
+      "missing_bullets": [],
+      "min_body_font_pt": 10.5,
+      "replacement_chars": 0,
+      "outside_page": [],
+      "sha256": "bce6ce578236287b1f9be43b689b558fa5eb5aa4fbd3cc23325ce2468c41bf60"
+    }
+  ],
+  "metadata_checks": [
+    {
+      "path": "outputs/chasen-canvas.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/chasen.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/cosen-classic.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/cosen-compact.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/cosen-minimal.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/cosen-modern.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/cosen-stress.pdf",
+      "missing_metadata": [],
+      "missing_stress_indices": []
+    },
+    {
+      "path": "outputs/cosen-timeline.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/cosen-weasy-linux-fixed.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/cosen-weasy-linux.pdf",
+      "missing_metadata": [
+        "林知远",
+        "示例市",
+        "虚构星河科技",
+        "虚构城市大学",
+        "计算物理学",
+        "本科",
+        "中文办公",
+        "知识库检索与回写",
+        "尚未测量"
+      ]
+    },
+    {
+      "path": "outputs/init-resume-builder.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/init-stress.pdf",
+      "missing_metadata": [],
+      "missing_stress_indices": [
+        9,
+        10,
+        19,
+        20,
+        29,
+        30,
+        39
+      ]
+    },
+    {
+      "path": "outputs/json-resume.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/md2pdf-stress.pdf",
+      "missing_metadata": [],
+      "missing_stress_indices": []
+    },
+    {
+      "path": "outputs/md2pdf.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/rendercv/林知远_CV.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/rendercv-classic/林知远_CV.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/rendercv-dense/林知远_CV.pdf",
+      "missing_metadata": [],
+      "missing_stress_indices": []
+    },
+    {
+      "path": "outputs/rendercv-dense-breakable/林知远_CV.pdf",
+      "missing_metadata": [],
+      "missing_stress_indices": []
+    },
+    {
+      "path": "outputs/rendercv-engineeringclassic/林知远_CV.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/rendercv-harvard/林知远_CV.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/rendercv-moderncv/林知远_CV.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/rendercv-sb2nov/林知远_CV.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/resume-builder-cn.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/resume-docx-adapted.pdf",
+      "missing_metadata": []
+    },
+    {
+      "path": "outputs/resume-docx.pdf",
+      "missing_metadata": [
+        "lin.zhiyuan@example.com",
+        "示例市",
+        "虚构城市大学",
+        "计算物理学",
+        "本科"
+      ]
+    },
+    {
+      "path": "outputs/resumemd.pdf",
+      "missing_metadata": []
+    }
+  ],
+  "parser_checks": [
+    {
+      "input": "markdown",
+      "missing_metadata": []
+    },
+    {
+      "input": "docx",
+      "missing_metadata": [
+        "虚构星河科技",
+        "虚构城市大学",
+        "计算物理学",
+        "本科",
+        "中文办公",
+        "GUI",
+        "Harness"
+      ]
+    },
+    {
+      "input": "pdf",
+      "missing_metadata": []
+    }
+  ],
+  "content_exercises": [
+    {
+      "id": "resume-optimizer",
+      "exercise": "same-session agent execution with shared Chinese fixture and JD",
+      "chinese_output": true,
+      "scope_retained": true,
+      "no_unverified_rust_skill": true,
+      "independent_repeated_evaluation": false
+    },
+    {
+      "id": "resume-coach",
+      "exercise": "same-session agent execution with shared Chinese fixture and JD",
+      "chinese_output": true,
+      "scope_retained": true,
+      "no_unverified_rust_skill": true,
+      "independent_repeated_evaluation": false
+    },
+    {
+      "id": "repo-to-resume-tailor",
+      "exercise": "same-session repository evidence exercise",
+      "chinese_output": true,
+      "scope_retained": true,
+      "independent_repeated_evaluation": false
+    }
+  ]
+}

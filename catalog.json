@@ -1,19 +1,351 @@
 {
   "checked_on": "2026-11-14",
-  "verification": "Repository metadata and selected upstream SKILL.md / README / design references read. No skill was installed, executed, or benchmarked.",
+  "verification": "Pinned-source tests on 2026-11-14: nine layout projects produced Chinese artifacts with varying conditions; three content workflows received a single-session guided exercise; resume-factory blocked. See tests/2026-11-14/README.md for scope and failures. Not an independent model benchmark or ATS certification.",
   "entries": [
-    {"id":"rendercv","repo":"rendercv/rendercv-skill","path":"skills/rendercv/SKILL.md","category":"layout","status":"listed","languages":"含中文语言配置","outputs":["PDF","PNG","HTML","Markdown","YAML"],"summary":"官方维护的 Typst 简历排版入口，提供工程、Harvard 等六套主题及字体、边距、间距配置。","limits":"需要 RenderCV 运行时；未列出 DOCX 输出。中文字体与实际分页需渲染确认。","sources":["https://docs.rendercv.com/user_guide/how_to/use_the_ai_agent_skill/"],"community":[]},
-    {"id":"cosen-resume-builder","repo":"cosen1024/resume-builder-skill","path":"resume_skill/SKILL.md","category":"layout","status":"listed","languages":"中文、英文、中英双语","outputs":["PDF","HTML","Markdown"],"summary":"中文优先，提供 compact、classic、modern、timeline、minimal 五套模板，使用 WeasyPrint 本地渲染。","limits":"需要 Python 与 WeasyPrint 系统依赖。包含内容润色流程，只排版时应明确保留原文；原规则中的强动词不能扩大本人职责。","sources":["https://github.com/cosen1024/resume-builder-skill/blob/main/README.md"],"community":[]},
-    {"id":"json-resume-docx","repo":"Eric-Zhou-0302/JSON-Resume","path":"SKILL.md","category":"layout","status":"listed","languages":"中文及英文混排","outputs":["DOCX","PDF","JSON"],"summary":"从结构化 JSON 生成 Word 简历，区分忠实渲染与内容创作模式，要求实际导出和逐页检查。","limits":"PDF 导出依赖 Windows/macOS 的 Microsoft Word；在线编辑器与本地 CLI 的数据路径不同。项目名不代表兼容 jsonresume.org 标准。","sources":["https://github.com/Eric-Zhou-0302/JSON-Resume/blob/main/README.md","https://www.ericzhou.net/about"],"community":[]},
-    {"id":"resume-docx","repo":"Denis-Tang/resume-layout-skill","path":"SKILL.md","category":"layout","status":"listed","languages":"中文","outputs":["DOCX","PNG","Markdown"],"summary":"Markdown 源文件与 Word 双向维护，含模板自举、Word 页数检查及预览流程。","limits":"精确页数依赖 Word；Python 页数检查是估算。源规则有严格的一页及固定版式约束，具体任务以用户要求为准。","sources":["https://github.com/Denis-Tang/resume-layout-skill/blob/main/README.md"],"community":[]},
-    {"id":"resumemd","repo":"beholder91/resume-md-skill","path":"plugins/resume-md/skills/resume-md/SKILL.md","category":"layout","status":"listed","languages":"中文优先，也支持英文","outputs":["PDF","Markdown"],"summary":"保真转换与确定性本地排版，关注字体嵌入、可提取文本和自然分页，不为排版主动改写内容。","limits":"上游 README 声明支持 macOS、Linux、WSL，暂不支持原生 Windows、多栏或头像；不强制一页。","sources":["https://github.com/beholder91/resume-md-skill/blob/main/README.md"],"community":[]},
-    {"id":"chasen-resume-skills","repo":"Chasen-Liao/resume-skills","path":"skills/resume-builder/SKILL.md","extra_paths":["skills/resume-canvas/SKILL.md"],"category":"layout","status":"listed","languages":"中文工作流","outputs":["HTML","PDF","YAML"],"summary":"母版构建与岗位定制工作流，提供视觉版、单栏版，以及本地 Canvas 字号和间距微调。","limits":"Canvas 只适配内置视觉模板，不适用于 ATS-safe 或任意外部 HTML；需完整渲染环境，不生成 DOCX。","sources":["https://github.com/Chasen-Liao/resume-skills/blob/main/README.md"],"community":[]},
-    {"id":"resume-optimizer","repo":"wyh0626/resume-optimizer","path":"SKILL.md","category":"content","status":"listed","languages":"中文","outputs":["诊断","改写草稿","行动清单"],"summary":"审计职责型表述，围绕成果、交付物和业务价值改写，并结合 JD 调整重点。","limits":"主要是内容工作流，不能当作确定性排版器或面试率保证；缺失指标仍需用户事实。","sources":["https://github.com/wyh0626/resume-optimizer/blob/main/SKILL.md"],"community":["https://v2ex.com/t/1205907","https://v2ex.com/t/1214446"]},
-    {"id":"resume-coach","repo":"leemysw/skills","path":"resume-coach/SKILL.md","category":"content","status":"listed","languages":"中文","outputs":["评分卡","诊断","改写草稿"],"summary":"从招聘阅读视角分析定位、成果叙事和 JD 匹配，配套解析 PDF/DOCX 等文件。","limits":"评分是提示词定义的主观检查，未经招聘结果校准；不属于模板排版工具。","sources":["https://github.com/leemysw/skills/blob/main/resume-coach/SKILL.md"],"community":["https://www.v2ex.com/t/1202012"]},
-    {"id":"repo-to-resume-tailor","repo":"Ssabby1/repo-to-resume-tailor","path":"repo-to-resume-tailor/SKILL.md","category":"content","status":"listed","languages":"中文及英文说明","outputs":["证据分析","项目经历正文"],"summary":"从代码、配置和架构材料提炼项目描述，按岗位方向或具体 JD 选择高信号证据。","limits":"仓库功能不等于个人贡献，代码存在不证明业务收益；内部项目应留在授权的本地环境。","sources":["https://github.com/Ssabby1/repo-to-resume-tailor/blob/main/README.md"],"community":["https://linux.do/t/topic/1810939"]},
-    {"id":"resume-builder-cn","repo":"LittleDrunkWang/resume-builder-cn","path":"SKILL.md","category":"layout","status":"watch","languages":"中文、英文、双语","outputs":["HTML","Markdown","PDF"],"summary":"提供单栏、研发成果型、侧栏和学术版式规则，含短词断行与可编辑 HTML 参数。","limits":"流程较长，含内容与岗位研究；入口描述字段的格式需在安装时检查。当前只核对文档，未确认可直接加载。","sources":["https://github.com/LittleDrunkWang/resume-builder-cn/blob/main/references/template_designs.md"],"community":[]},
-    {"id":"init-resume-builder","repo":"INIT1996/resume-builder","path":"SKILL.md","category":"layout","status":"watch","languages":"中文优先","outputs":["HTML"],"summary":"中文优先的 HTML 简历生成与分页规则，强调保留事实与可编辑交付。","limits":"默认只生成 HTML，PDF 需单独请求；入口描述字段的格式需检查，当前未确认可直接加载。","sources":["https://github.com/INIT1996/resume-builder/blob/main/SKILL.md"],"community":[]},
-    {"id":"resume-md2pdf","repo":"HduSy/resume-md2pdf","path":"SKILL.md","category":"layout","status":"watch","languages":"中文或纯英文","outputs":["HTML","PDF"],"summary":"忠于 Markdown 原文设计视觉主题，用 Chromium 导出 A4 PDF。","limits":"上游明确不做中英混排，包含浏览器预览和确认环节；技术词密集的中文简历需先验证。","sources":["https://github.com/HduSy/resume-md2pdf/blob/main/SKILL.md"],"community":[]},
-    {"id":"resume-factory","repo":"hyf020908/resume-factory","path":"SKILL.md","category":"layout","status":"watch","languages":"可指定目标语言","outputs":["PDF","LaTeX"],"summary":"十套 LaTeX 风格，强调内容保真、编译与版面检查。","limits":"当前规则要求照片，并允许为强制一页把正文压到 5.5pt 甚至更小；不宜不加判断地用于正式求职简历。","sources":["https://github.com/hyf020908/resume-factory/blob/main/SKILL.md"],"community":[]}
+    {
+      "id": "rendercv",
+      "repo": "rendercv/rendercv-skill",
+      "path": "skills/rendercv/SKILL.md",
+      "category": "layout",
+      "status": "listed",
+      "languages": "含中文语言配置",
+      "outputs": [
+        "PDF",
+        "PNG",
+        "HTML",
+        "Markdown",
+        "YAML"
+      ],
+      "summary": "官方维护的 Typst 简历排版入口，提供工程、Harvard 等六套主题及字体、边距、间距配置。",
+      "limits": "需要 RenderCV 运行时；未列出 DOCX 输出。中文字体与实际分页需渲染确认。",
+      "sources": [
+        "https://docs.rendercv.com/user_guide/how_to/use_the_ai_agent_skill/"
+      ],
+      "community": [],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "fc14e727b2d4a36c612ef0989726bd18411218d7",
+        "status": "baseline_pass_with_configuration",
+        "summary": "推荐 PDF 排版；六主题中文一页通过。需配置中文字体；40 条长文默认设置裁字，开启章节和条目跨页后两页通过。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "cosen-resume-builder",
+      "repo": "cosen1024/resume-builder-skill",
+      "path": "resume_skill/SKILL.md",
+      "category": "layout",
+      "status": "listed",
+      "languages": "中文、英文、中英双语",
+      "outputs": [
+        "PDF",
+        "HTML",
+        "Markdown"
+      ],
+      "summary": "中文优先，提供 compact、classic、modern、timeline、minimal 五套模板，使用 WeasyPrint 本地渲染。",
+      "limits": "需要 Python 与 WeasyPrint 系统依赖。包含内容润色流程，只排版时应明确保留原文；原规则中的强动词不能扩大本人职责。",
+      "sources": [
+        "https://github.com/cosen1024/resume-builder-skill/blob/main/README.md"
+      ],
+      "community": [],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "a4bfa74bd72ef1a75fd9c02ac1e27dd353f6dde1",
+        "status": "conditional",
+        "summary": "五模板 HTML + Edge 输出通过；Windows 原生 WeasyPrint 缺 DLL。WSL 补齐中文字体与 fontconfig 后 compact 通过；缺字体首次输出中文丢失。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "json-resume-docx",
+      "repo": "Eric-Zhou-0302/JSON-Resume",
+      "path": "SKILL.md",
+      "category": "layout",
+      "status": "listed",
+      "languages": "中文及英文混排",
+      "outputs": [
+        "DOCX",
+        "PDF",
+        "JSON"
+      ],
+      "summary": "从结构化 JSON 生成 Word 简历，区分忠实渲染与内容创作模式，要求实际导出和逐页检查。",
+      "limits": "PDF 导出依赖 Windows/macOS 的 Microsoft Word；在线编辑器与本地 CLI 的数据路径不同。项目名不代表兼容 jsonresume.org 标准。",
+      "sources": [
+        "https://github.com/Eric-Zhou-0302/JSON-Resume/blob/main/README.md",
+        "https://www.ericzhou.net/about"
+      ],
+      "community": [],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "9ca9ada33c927dadaf8e483c2269165847830e85",
+        "status": "baseline_pass_with_configuration",
+        "summary": "推荐 Word；按其 JSON 契约适配后，原 CLI 生成 DOCX 并通过 Word 导出一页 PDF。标签联系人需显式 href:null。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "resume-docx",
+      "repo": "Denis-Tang/resume-layout-skill",
+      "path": "SKILL.md",
+      "category": "layout",
+      "status": "listed",
+      "languages": "中文",
+      "outputs": [
+        "DOCX",
+        "PNG",
+        "Markdown"
+      ],
+      "summary": "Markdown 源文件与 Word 双向维护，含模板自举、Word 页数检查及预览流程。",
+      "limits": "精确页数依赖 Word；Python 页数检查是估算。源规则有严格的一页及固定版式约束，具体任务以用户要求为准。 专用 Markdown 语法需适配；原脚本会把个人所在地补进教育所在地，严格保真有缺陷。 专用 Markdown 语法需适配；原脚本会把个人所在地补进教育所在地，严格保真有缺陷。",
+      "sources": [
+        "https://github.com/Denis-Tang/resume-layout-skill/blob/main/README.md"
+      ],
+      "community": [],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "3cdde8a109b8bc83fae66ed69d4b910385e2fe12",
+        "status": "partial",
+        "summary": "适配专用 Markdown 语法后文字保留；普通语法会漏联系信息和教育。原脚本把个人所在地补进学校所在地，严格保真不通过。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "resumemd",
+      "repo": "beholder91/resume-md-skill",
+      "path": "plugins/resume-md/skills/resume-md/SKILL.md",
+      "category": "layout",
+      "status": "listed",
+      "languages": "中文优先，也支持英文",
+      "outputs": [
+        "PDF",
+        "Markdown"
+      ],
+      "summary": "保真转换与确定性本地排版，关注字体嵌入、可提取文本和自然分页，不为排版主动改写内容。",
+      "limits": "上游 README 声明支持 macOS、Linux、WSL，暂不支持原生 Windows、多栏或头像；不强制一页。",
+      "sources": [
+        "https://github.com/beholder91/resume-md-skill/blob/main/README.md"
+      ],
+      "community": [],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "ea92c361ea61d86e2a028da2cf95ada4c55e33b3",
+        "status": "baseline_pass_on_supported_platform",
+        "summary": "WSL Ubuntu 原 CLI 输出中文一页，Noto Sans SC 字体下载成功；原生 Windows 不在上游支持范围。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "chasen-resume-skills",
+      "repo": "Chasen-Liao/resume-skills",
+      "path": "skills/resume-builder/SKILL.md",
+      "extra_paths": [
+        "skills/resume-canvas/SKILL.md"
+      ],
+      "category": "layout",
+      "status": "listed",
+      "languages": "中文工作流",
+      "outputs": [
+        "HTML",
+        "PDF",
+        "YAML"
+      ],
+      "summary": "母版构建与岗位定制工作流，提供视觉版、单栏版，以及本地 Canvas 字号和间距微调。",
+      "limits": "Canvas 只适配内置视觉模板，不适用于 ATS-safe 或任意外部 HTML；需完整渲染环境，不生成 DOCX。",
+      "sources": [
+        "https://github.com/Chasen-Liao/resume-skills/blob/main/README.md"
+      ],
+      "community": [],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "3e5b8f61c81349ed9b4b5113c4faf8b4ac8f6992",
+        "status": "conditional_visual_issue",
+        "summary": "Edge 适配后原渲染器通过；Canvas 编辑、保存、读回及重导出已操作验证。短稿出现大段纵向留白，需调布局。默认 Chromium 下载在本次环境超时。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "resume-optimizer",
+      "repo": "wyh0626/resume-optimizer",
+      "path": "SKILL.md",
+      "category": "content",
+      "status": "listed",
+      "languages": "中文",
+      "outputs": [
+        "诊断",
+        "改写草稿",
+        "行动清单"
+      ],
+      "summary": "审计职责型表述，围绕成果、交付物和业务价值改写，并结合 JD 调整重点。",
+      "limits": "主要是内容工作流，不能当作确定性排版器或面试率保证；缺失指标仍需用户事实。",
+      "sources": [
+        "https://github.com/wyh0626/resume-optimizer/blob/main/SKILL.md"
+      ],
+      "community": [
+        "https://v2ex.com/t/1205907",
+        "https://v2ex.com/t/1214446"
+      ],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "fb16670c07bf22cce8c8a9b8494bbd693ea4651c",
+        "status": "single_session_only",
+        "summary": "按上游流程做一次中文样例审计，保留团队归属与未测量项；非独立或重复模型评测，无排版器验收。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "resume-coach",
+      "repo": "leemysw/skills",
+      "path": "resume-coach/SKILL.md",
+      "category": "content",
+      "status": "listed",
+      "languages": "中文",
+      "outputs": [
+        "评分卡",
+        "诊断",
+        "改写草稿"
+      ],
+      "summary": "从招聘阅读视角分析定位、成果叙事和 JD 匹配，配套解析 PDF/DOCX 等文件。",
+      "limits": "评分是提示词定义的主观检查，未经招聘结果校准；不属于模板排版工具。 实跑发现 DOCX 表格文字被跳过；优先输入已核对的 PDF / Markdown。 实跑发现 DOCX 表格文字被跳过；优先输入已核对的 PDF / Markdown。",
+      "sources": [
+        "https://github.com/leemysw/skills/blob/main/resume-coach/SKILL.md"
+      ],
+      "community": [
+        "https://www.v2ex.com/t/1202012"
+      ],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "c74119813aa295331e21d07e04cc86a377a16956",
+        "status": "partial_parser_and_single_session",
+        "summary": "中文诊断单次演练完成；MD/PDF 解析保留检查项。DOCX 解析只读普通段落，漏掉表格中的公司、学校和项目标题，不可直接信任诊断。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "repo-to-resume-tailor",
+      "repo": "Ssabby1/repo-to-resume-tailor",
+      "path": "repo-to-resume-tailor/SKILL.md",
+      "category": "content",
+      "status": "listed",
+      "languages": "中文及英文说明",
+      "outputs": [
+        "证据分析",
+        "项目经历正文"
+      ],
+      "summary": "从代码、配置和架构材料提炼项目描述，按岗位方向或具体 JD 选择高信号证据。",
+      "limits": "仓库功能不等于个人贡献，代码存在不证明业务收益；内部项目应留在授权的本地环境。",
+      "sources": [
+        "https://github.com/Ssabby1/repo-to-resume-tailor/blob/main/README.md"
+      ],
+      "community": [
+        "https://linux.do/t/topic/1810939"
+      ],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "6d2f526b15a6e8f6796e5953d48d7130a06def61",
+        "status": "single_session_only",
+        "summary": "用虚构仓库做一次中文证据演练，区分本人函数与参考模板；不证明真实履历收益或重复执行质量。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "resume-builder-cn",
+      "repo": "LittleDrunkWang/resume-builder-cn",
+      "path": "SKILL.md",
+      "category": "layout",
+      "status": "watch",
+      "languages": "中文、英文、双语",
+      "outputs": [
+        "HTML",
+        "Markdown",
+        "PDF"
+      ],
+      "summary": "提供单栏、研发成果型、侧栏和学术版式规则，含短词断行与可编辑 HTML 参数。",
+      "limits": "入口 YAML 解析有效；本轮只验证内置可编辑模板 + Edge 导出，完整内容与研究流程未执行。",
+      "sources": [
+        "https://github.com/LittleDrunkWang/resume-builder-cn/blob/main/references/template_designs.md"
+      ],
+      "community": [],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "82f90483ca06984060848f4521ff7aabc872726a",
+        "status": "template_only",
+        "summary": "入口 YAML 有效。上游可编辑模板填入同一虚构样例后用 Edge 导出通过；没有执行完整访谈、岗位研究及其原导出脚本。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "init-resume-builder",
+      "repo": "INIT1996/resume-builder",
+      "path": "SKILL.md",
+      "category": "layout",
+      "status": "watch",
+      "languages": "中文优先",
+      "outputs": [
+        "HTML"
+      ],
+      "summary": "中文优先的 HTML 简历生成与分页规则，强调保留事实与可编辑交付。",
+      "limits": "入口 YAML 有效；中文单页模板通过，多块长文示例分页会隐藏内容。PDF 不是默认交付物，需单独导出并查页边。",
+      "sources": [
+        "https://github.com/INIT1996/resume-builder/blob/main/SKILL.md"
+      ],
+      "community": [],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "c710c4d7d00b8b245cf7913c9a989a3c1bebae0d",
+        "status": "baseline_only_stress_fail",
+        "summary": "入口 YAML 有效。样例模板单页通过；多块长文示例分页生成 5 页，7 个压力编号的完整正文不可提取，页面边缘可见裁切。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "resume-md2pdf",
+      "repo": "HduSy/resume-md2pdf",
+      "path": "SKILL.md",
+      "category": "layout",
+      "status": "watch",
+      "languages": "中文或纯英文",
+      "outputs": [
+        "HTML",
+        "PDF"
+      ],
+      "summary": "忠于 Markdown 原文设计视觉主题，用 Chromium 导出 A4 PDF。",
+      "limits": "上游明确不做中英混排，包含浏览器预览和确认环节；技术词密集的中文简历需先验证。",
+      "sources": [
+        "https://github.com/HduSy/resume-md2pdf/blob/main/SKILL.md"
+      ],
+      "community": [],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "44c511605b7efbaf9a51715fd15bb7c6c4993a03",
+        "status": "conditional",
+        "summary": "上游建 HTML 和导出脚本使用 Edge，中文技术词混排样例及 40 条长文通过。上游仍明确不支持混排，不将一次成功扩展为通用支持。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    },
+    {
+      "id": "resume-factory",
+      "repo": "hyf020908/resume-factory",
+      "path": "SKILL.md",
+      "category": "layout",
+      "status": "watch",
+      "languages": "可指定目标语言",
+      "outputs": [
+        "PDF",
+        "LaTeX"
+      ],
+      "summary": "十套 LaTeX 风格，强调内容保真、编译与版面检查。",
+      "limits": "当前规则要求照片，并允许为强制一页把正文压到 5.5pt 甚至更小；不宜不加判断地用于正式求职简历。",
+      "sources": [
+        "https://github.com/hyf020908/resume-factory/blob/main/SKILL.md"
+      ],
+      "community": [],
+      "test_result": {
+        "date": "2026-11-14",
+        "source_commit": "2fd9453f6fa90c39e70e30f6c8cb3e22c710f293",
+        "status": "blocked_environment",
+        "summary": "真实上游模板的 XeLaTeX 编译探针缺 TikZ shadows.blur，未生成 PDF；不是完整中文样例通过。未为测试安装全局 TeX 包。",
+        "report": "tests/2026-11-14/README.md"
+      }
+    }
   ]
 }
